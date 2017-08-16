@@ -11,4 +11,10 @@ logos = ['logo1.png','logo2.png','logo3.png', 'logo4.png', 'logo5.png',
 var image = function(){return logos[Math.floor(Math.random()*logos.length)]};
 console.log(image());
 
+//diana will write code to update the logo
+
+
+//
+
+
 console.log("disney content script: ...end");
