@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name":        "DisneySearch",
+  "version":     "1.0",
+  "description": "Customizes google search engine to be Disney/Pixar themed.",
+
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "pageCapture",
+    "storage",
+    "tabs",
+    "unlimitedStorage"
+  ]
+
+}
