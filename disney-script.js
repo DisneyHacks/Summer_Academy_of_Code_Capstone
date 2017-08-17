@@ -90,7 +90,7 @@ $(ourDiv).append(linkDiv);
 //imageDiv for link
 var linkImage = $('<img></img>');
 $(linkImage).attr('id', 'linkPhoto');
-$(linkImage).attr('src',"https://farm5.staticflickr.com/4429/36591338956_e6f98edeb4_q.jpg", width="150",height="150");
+$(linkImage).attr('src',"https://image.ibb.co/iAiSMa/disney_comlogo.png", width="150",height="150");
 $(linkDiv).append(linkImage);
 console.log("index: " + index);
 
