@@ -6,8 +6,8 @@ var googlePathName = "/";
 if (window.location.pathname === newTabPathName || window.location.pathname === googlePathName){
 
 //IMAGES URL HERE
-var logo1 = {img: 'https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.jpg', color: '#ffffcc'}; 
-//var logo1 = "https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.jpg"; 
+var logo1 = {img: 'https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.jpg', color: '#ffffcc'};
+//var logo1 = "https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.jpg";
 //var logo2 = "https://farm5.staticflickr.com/4353/36637034225_a97300968c_z.jpg";
 //var logo3 = "https://farm5.staticflickr.com/4402/36590813826_a87542f437_z.jpg";
 // var logo4 = "";
@@ -33,8 +33,8 @@ p.removeChild(changeLogo);
 var images = document.createElement('IMG');
 images.id = 'hplogo';
 images.setAttribute("src", image().img);
-document.body.style.backgroundColor = image().color; 
-//images.setAttribute("style", "background-color:" + image().color); 
+document.body.style.backgroundColor = image().color;
+//images.setAttribute("style", "background-color:" + image().color);
 p.appendChild(images);
 
 //remove top sites
@@ -79,14 +79,14 @@ function parseGiphy(response){
 var linkDiv = $('<a></a>');
 $(linkDiv).attr('href', 'http://www.disney.com/');
 $(linkDiv).attr('id', 'disneyWeb');
-$(linkDiv).attr('target', "_blank"); 
+$(linkDiv).attr('target', "_blank");
 $(ourDiv).append(linkDiv);
 //imageDiv for link
 var linkImage = $('<img></img>');
-$(linkImage).attr('id', 'linkPhoto'); 
+$(linkImage).attr('id', 'linkPhoto');
 $(linkImage).attr('src', "https://farm5.staticflickr.com/4394/36238617010_e82da3be75_m.jpg", width="240", height="132" );
 $(linkDiv).append(linkImage);
-
+$(linkDiv).append('<iframe width="400" height="240" src="https://www.youtube.com/embed/videoseries?list=PLmLrLFIfPyS7Xz9ErhMAt15rPXBoBkPr2" frameborder="0" allowfullscreen></iframe>');
 
 xhttp.open("GET", "https://api.giphy.com/v1/gifs/translate?s=disney&api_key=dc4868f0b5f54decab30be68d6e80edb",true);
 xhttp.send();
