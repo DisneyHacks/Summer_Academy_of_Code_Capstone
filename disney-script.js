@@ -18,7 +18,9 @@ logos = [logo1]//, logo2, logo3]// logo4]//, 'logo5.jpg',
 
 // var imageDiv = document.getElementById('lga');
 // imageDiv.appendChild(images)
+var numVids = 10;
 
+var index = Math.floor(Math.random()*numVids);
 //get a random image from our array
 var image = function(){return logos[Math.floor(Math.random()*logos.length)]};
 // //console.log(image());
@@ -43,8 +45,8 @@ $(removeSites).remove();
 }
 
 //remove bottom search buttons
-var removeButtons = document.getElementsByClassName('jsb'); 
-$(removeButtons).remove(); 
+var removeButtons = document.getElementsByClassName('jsb');
+$(removeButtons).remove();
 
 //add our own stuff
 var ourDiv = $('<div></div>');
@@ -90,8 +92,18 @@ var linkImage = $('<img></img>');
 $(linkImage).attr('id', 'linkPhoto');
 $(linkImage).attr('src',"https://farm5.staticflickr.com/4429/36591338956_e6f98edeb4_q.jpg", width="150",height="150");
 $(linkDiv).append(linkImage);
-$(linkDiv).append('<iframe width="400" height="240" src="https://www.youtube.com/embed/videoseries?list=PLmLrLFIfPyS7Xz9ErhMAt15rPXBoBkPr2" frameborder="0" allowfullscreen></iframe>');
-$(linkDiv).attr('id', 'video'); 
+console.log("index: " + index);
+
+var vidSource = 'https://www.youtube.com/embed/videoseries?list=PLmLrLFIfPyS7Xz9ErhMAt15rPXBoBkPr2&index=' + index + '&autoplay=1';
+var vid = '<iframe src=' + vidSource + ' width="400" height="240" frameborder="0" allowfullscreen></iframe>';
+console.log(vid);
+
+$(linkDiv).append(vid);
+$(linkDiv).attr('id', 'video');
+
+
+console.log("Source of vid: " + $('#video').attr('src'));
+
 xhttp.open("GET", "https://api.giphy.com/v1/gifs/translate?s=disney&api_key=dc4868f0b5f54decab30be68d6e80edb",true);
 xhttp.send();
 
