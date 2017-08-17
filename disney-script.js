@@ -12,13 +12,16 @@ logos = ['logo1.png','logo2.png','logo3.png', 'logo4.png', 'logo5.png',
 var image = function(){return logos[Math.floor(Math.random()*logos.length)]};
 //console.log(image());
 
+console.log(document.getElementsByClassName('ctr-p'));
+console.log(document);
+
 //diana will write code to update the logo
-var changeLogo = document.getElementById('hplogo'); 
-console.log(changeLogo); 
+var changeLogo = document.getElementById('hplogo');
+console.log(changeLogo);
 // for (var i = 0 ; i < logos.length; i++){
-//     changeLogo.id = logos[i]; 
-//     console.log("TESTTT"); 
-// } 
+//     changeLogo.id = logos[i];
+//     console.log("TESTTT");
+// }
 
 //
 console.log("disney content script: ...end");

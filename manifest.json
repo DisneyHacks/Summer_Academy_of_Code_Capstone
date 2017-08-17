@@ -16,7 +16,7 @@
       "matches": ["*://*.google.com/*"],
       "css": ["disney.css"],
       "js": ["disney-script.js"],
-      "run_at": "document_start"
+      "run_at": "document_end"
     }
   ],
 
