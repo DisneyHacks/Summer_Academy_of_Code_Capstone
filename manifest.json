@@ -15,7 +15,7 @@
     {
       "matches": ["https://www.google.com/*"],
       "css": ["disney.css"],
-      "js": ["disney-script.js"],
+      "js": ["jquery-3.2.1.min.js", "disney-script.js"],
       "run_at": "document_end"
     }
   ],
