@@ -4,6 +4,7 @@ var newTabPathName = "/_/chrome/newtab";
 var googlePathName = "/";
 
 if (window.location.pathname === newTabPathName || window.location.pathname === googlePathName){
+    
 //IMAGES URL HERE
 var logo1 = "https://lh3.googleusercontent.com/RVtwSeu8ZWL-IjY0o6IVDzjQ01BEqNBGUFn0n73enrORfVFmpK6AGHFDWZ2nYKMGXIaI4FXBHqMvPah36UvPiTq3b2i0EZ1uIR377Aw=s660";
 var logo2 = "https://rebeccanicholeratliff.files.wordpress.com/2013/01/disney-facebookcover.jpg";
@@ -33,22 +34,8 @@ images.id = 'hplogo';
 images.setAttribute("src", image());
 p.appendChild(images);
 
-var tabOptions = document.getElementById('mv-tiles');
-// tabOptions.innerHTML = "<p>Hello</p>";
-console.log("tabs: " + tabOptions.innerHTML);
-
-$(document).ready(function(){
-	var tabs = document.getElementById('mv-tiles');
-	console.log("TABS: " + tabs.innerHTML);
-})
-// document.onload = function(){
-// 	cosole.log("HELLO");
-// 	var tabs = document.getElementById('mv-tiles');
-// 		console.log("TABS: " + tabs.innerHTML);
-// }
-
-
-
+var removeSites = document.getElementById('mv-tiles'); 
+$(removeSites).remove(); 
 
 }
 

@@ -26,7 +26,8 @@
     "storage",
     "tabs",
     "unlimitedStorage",
-    "http://www.google.com/*"
+    "http://www.google.com/*",
+    "topSites"
   ]
 
 }
