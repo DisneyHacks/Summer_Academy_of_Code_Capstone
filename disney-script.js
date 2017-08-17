@@ -4,7 +4,7 @@ var newTabPathName = "/_/chrome/newtab";
 var googlePathName = "/";
 
 if (window.location.pathname === newTabPathName || window.location.pathname === googlePathName){
-    
+
 //IMAGES URL HERE
 var logo1 = "https://lh3.googleusercontent.com/RVtwSeu8ZWL-IjY0o6IVDzjQ01BEqNBGUFn0n73enrORfVFmpK6AGHFDWZ2nYKMGXIaI4FXBHqMvPah36UvPiTq3b2i0EZ1uIR377Aw=s660";
 var logo2 = "https://rebeccanicholeratliff.files.wordpress.com/2013/01/disney-facebookcover.jpg";
@@ -34,11 +34,20 @@ images.id = 'hplogo';
 images.setAttribute("src", image());
 p.appendChild(images);
 
-var removeSites = document.getElementById('mv-tiles'); 
-$(removeSites).remove(); 
-
+//remove top sites
+var removeSites = document.getElementById('mv-tiles');
+$(removeSites).remove();
 }
 
+//add our own stuff
+var ourDiv = $('<div></div>')
+$(ourDiv).attr('id', 'newContent');
 
-//
+//apend ourDiv
+var origDiv = document.getElementById('most-visited');
+$(origDiv).append(ourDiv);
+
+
+
+
 console.log("disney content script: ...end");
