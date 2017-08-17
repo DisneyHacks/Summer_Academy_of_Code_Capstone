@@ -2,6 +2,7 @@
 console.log("disney content script: begin...");
 
 
+
 //put all possible logo images in an array
 var logos = [];
 logos = ['logo1.png','logo2.png','logo3.png', 'logo4.png', 'logo5.png',
@@ -9,12 +10,15 @@ logos = ['logo1.png','logo2.png','logo3.png', 'logo4.png', 'logo5.png',
 
 //get a random image from our array
 var image = function(){return logos[Math.floor(Math.random()*logos.length)]};
-console.log(image());
+//console.log(image());
 
 //diana will write code to update the logo
-
+var changeLogo = document.getElementById('hplogo'); 
+console.log(changeLogo); 
+// for (var i = 0 ; i < logos.length; i++){
+//     changeLogo.id = logos[i]; 
+//     console.log("TESTTT"); 
+// } 
 
 //
-
-
 console.log("disney content script: ...end");
