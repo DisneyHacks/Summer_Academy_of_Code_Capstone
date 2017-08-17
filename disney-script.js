@@ -37,11 +37,15 @@ var tabOptions = document.getElementById('mv-tiles');
 // tabOptions.innerHTML = "<p>Hello</p>";
 console.log("tabs: " + tabOptions.innerHTML);
 
-document.onload = function(){
-	cosole.log("HELLO");
+$(document).ready(function(){
 	var tabs = document.getElementById('mv-tiles');
-		console.log("TABS: " + tabs.innerHTML);
-}
+	console.log("TABS: " + tabs.innerHTML);
+})
+// document.onload = function(){
+// 	cosole.log("HELLO");
+// 	var tabs = document.getElementById('mv-tiles');
+// 		console.log("TABS: " + tabs.innerHTML);
+// }
 
 
 
