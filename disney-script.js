@@ -6,17 +6,18 @@ var googlePathName = "/";
 if (window.location.pathname === newTabPathName || window.location.pathname === googlePathName){
 
 //IMAGES URL HERE
-var logo1 = "https://lh3.googleusercontent.com/RVtwSeu8ZWL-IjY0o6IVDzjQ01BEqNBGUFn0n73enrORfVFmpK6AGHFDWZ2nYKMGXIaI4FXBHqMvPah36UvPiTq3b2i0EZ1uIR377Aw=s660";
-var logo2 = "https://rebeccanicholeratliff.files.wordpress.com/2013/01/disney-facebookcover.jpg";
-var logo3 = "https://s-media-cache-ak0.pinimg.com/736x/f4/6c/4a/f46c4af8bd526f632be370f3d875f139--facebook-profile-facebook-timeline.jpg";
-var logo4 = "https://i1.wp.com/holidaysandobservances.net/wp-content/uploads/2015/09/tumblr_muxvjfmnun1rf73xqo10_1280.png";
+var logo1 = {img: 'https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.jpg', color: '#ffffcc'}; 
+//var logo1 = "https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.jpg"; 
+//var logo2 = "https://farm5.staticflickr.com/4353/36637034225_a97300968c_z.jpg";
+//var logo3 = "https://farm5.staticflickr.com/4402/36590813826_a87542f437_z.jpg";
+// var logo4 = "";
 //put all possible logo images in an array
 var logos = [];
-logos = [logo1, logo2, logo3, logo4]//, 'logo5.jpg',
+logos = [logo1]//, logo2, logo3]// logo4]//, 'logo5.jpg',
 // 'logo6.jpg', 'logo7.png', 'logo8.png','logo9.png','logo10.png','logo11.png'];
 
 // var imageDiv = document.getElementById('lga');
-// imageDiv.appendChild(images);
+// imageDiv.appendChild(images)
 
 //get a random image from our array
 var image = function(){return logos[Math.floor(Math.random()*logos.length)]};
@@ -31,7 +32,9 @@ p.removeChild(changeLogo);
 
 var images = document.createElement('IMG');
 images.id = 'hplogo';
-images.setAttribute("src", image());
+images.setAttribute("src", image().img);
+document.body.style.backgroundColor = image().color; 
+//images.setAttribute("style", "background-color:" + image().color); 
 p.appendChild(images);
 
 //remove top sites
