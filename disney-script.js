@@ -44,7 +44,7 @@ var ourDiv = $('<div></div>');
 $(ourDiv).attr('id', 'newContent');
 
 //apend ourDiv
-var origDiv = document.getElementById('most-visited');
+var origDiv = document.getElementById('prm-pt');
 $(origDiv).append(ourDiv);
 
 //GIF stuff here
@@ -64,7 +64,8 @@ function parseGiphy(response){
 	console.log(obj.data.embed_url);
 	var giphy = $('<iframe>', {
 		src: url,
-		frameborder: 0
+        frameborder: 0,
+        id: 'gif'
 	})
 
 
@@ -75,10 +76,12 @@ function parseGiphy(response){
 var linkDiv = $('<a></a>');
 $(linkDiv).attr('href', 'http://www.disney.com/');
 $(linkDiv).attr('id', 'disneyWeb');
-$(origDiv).append(linkDiv);
+$(linkDiv).attr('target', "_blank"); 
+$(ourDiv).append(linkDiv);
 //imageDiv for link
 var linkImage = $('<img></img>');
-$(linkImage).attr('src', 'https://farm5.staticflickr.com/4364/36465540742_952eda9b27_k.jpg');
+$(linkImage).attr('id', 'linkPhoto'); 
+$(linkImage).attr('src', "https://farm5.staticflickr.com/4394/36238617010_e82da3be75_m.jpg", width="240", height="132" );
 $(linkDiv).append(linkImage);
 
 
