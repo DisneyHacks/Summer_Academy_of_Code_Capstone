@@ -42,6 +42,10 @@ var removeSites = document.getElementById('mv-tiles');
 $(removeSites).remove();
 }
 
+//remove bottom search buttons
+var removeButtons = document.getElementsByClassName('jsb'); 
+$(removeButtons).remove(); 
+
 //add our own stuff
 var ourDiv = $('<div></div>');
 $(ourDiv).attr('id', 'newContent');
@@ -84,10 +88,10 @@ $(ourDiv).append(linkDiv);
 //imageDiv for link
 var linkImage = $('<img></img>');
 $(linkImage).attr('id', 'linkPhoto');
-$(linkImage).attr('src', "https://farm5.staticflickr.com/4394/36238617010_e82da3be75_m.jpg", width="240", height="132" );
+$(linkImage).attr('src',"https://farm5.staticflickr.com/4429/36591338956_e6f98edeb4_q.jpg", width="150",height="150");
 $(linkDiv).append(linkImage);
 $(linkDiv).append('<iframe width="400" height="240" src="https://www.youtube.com/embed/videoseries?list=PLmLrLFIfPyS7Xz9ErhMAt15rPXBoBkPr2" frameborder="0" allowfullscreen></iframe>');
-
+$(linkDiv).attr('id', 'video'); 
 xhttp.open("GET", "https://api.giphy.com/v1/gifs/translate?s=disney&api_key=dc4868f0b5f54decab30be68d6e80edb",true);
 xhttp.send();
 

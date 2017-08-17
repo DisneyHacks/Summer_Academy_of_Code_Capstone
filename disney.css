@@ -1,11 +1,17 @@
 #linkPhoto{
-    float: left;
+    padding-right: 5%;  
+    padding-left: 5%; 
 }
 
 #gif{
-    float: right; 
+    padding-right: 5%; 
 }
-
+/* #video{
+     padding-left: 90px; 
+} */
 #hplogo{
-    padding-bottom: 15px; 
+    padding-bottom: 5%; 
+}
+#linkPhoto, gif, video{
+    display:inline; 
 }
