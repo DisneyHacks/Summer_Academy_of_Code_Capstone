@@ -47,7 +47,16 @@ $(ourDiv).attr('id', 'newContent');
 var origDiv = document.getElementById('most-visited');
 $(origDiv).append(ourDiv);
 
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function(){
+	if(this.readyState == 4 && this.status == 200){
 
+		console.log(this.responseText);
+	}
+}
+
+xhttp.open("GET", "https://api.giphy.com/v1/gifs/translate?s=disney&api_key=dc4868f0b5f54decab30be68d6e80edb",true);
+xhttp.send();
 
 
 console.log("disney content script: ...end");
