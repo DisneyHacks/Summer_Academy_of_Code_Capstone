@@ -13,7 +13,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.google.com/*"],
+      "matches": ["https://www.google.com/*"],
       "css": ["disney.css"],
       "js": ["disney-script.js"],
       "run_at": "document_end"
@@ -25,7 +25,8 @@
     "pageCapture",
     "storage",
     "tabs",
-    "unlimitedStorage"
+    "unlimitedStorage",
+    "http://www.google.com/*"
   ]
 
 }
