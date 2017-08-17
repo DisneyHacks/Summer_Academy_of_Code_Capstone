@@ -51,29 +51,41 @@ $(origDiv).append(ourDiv);
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function(){
 	if(this.readyState == 4 && this.status == 200){
-
-		console.log(this.responseText);
+		parseGiphy(this.responseText);
+		//console.log(this.responseText);
 	}
 }
 
 //parse through response text
 function parseGiphy(response){
+	var obj = JSON.parse(response);
+	console.log(obj);
+	var url = obj.data.embed_url
+	console.log(obj.data.embed_url);
+	var giphy = $('<iframe>', {
+		src: url,
+		frameborder: 0
+	})
 
+
+	$(ourDiv).append(giphy);
 }
 
-//Link stuff here 
+//Link stuff here
 var linkDiv = $('<a></a>');
-$(linkDiv).attr('href', 'http://www.disney.com/'); 
-$(linkDiv).attr('id', 'disneyWeb'); 
-$(origDiv).append(linkDiv); 
+$(linkDiv).attr('href', 'http://www.disney.com/');
+$(linkDiv).attr('id', 'disneyWeb');
+$(origDiv).append(linkDiv);
 //imageDiv for link
 var linkImage = $('<img></img>');
-$(linkImage).attr('src', 'https://farm5.staticflickr.com/4364/36465540742_952eda9b27_k.jpg'); 
-$(linkDiv).append(linkImage); 
+$(linkImage).attr('src', 'https://farm5.staticflickr.com/4364/36465540742_952eda9b27_k.jpg');
+$(linkDiv).append(linkImage);
 
 
 xhttp.open("GET", "https://api.giphy.com/v1/gifs/translate?s=disney&api_key=dc4868f0b5f54decab30be68d6e80edb",true);
 xhttp.send();
+
+
 
 
 console.log("disney content script: ...end");

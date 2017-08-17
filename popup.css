@@ -4,11 +4,13 @@
 	margin: 0;
 	width: 150px;
 	height: 200px;
+	background: url("ears.jpg");
+	background-size: 200px;
 
 }
 
 #title {
-	background-color: black;
+	background: black;
 	height: 30px;
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
