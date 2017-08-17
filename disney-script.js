@@ -55,6 +55,12 @@ xhttp.onreadystatechange = function(){
 	}
 }
 
+//parse through response text
+function parseGiphy(response){
+
+}
+
+
 xhttp.open("GET", "https://api.giphy.com/v1/gifs/translate?s=disney&api_key=dc4868f0b5f54decab30be68d6e80edb",true);
 xhttp.send();
 
