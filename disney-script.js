@@ -111,11 +111,11 @@ chrome.runtime.onMessage.addListener(
 			updateGoogle(logos);
 			sendResponse({theme: 'default'});
 		}else if(message.page_theme === 'tarzan' ){
-			var tarzanBG = [{img: "https://preview.ibb.co/dXnmz5/Tarzan_disneyscreencaps_com_4632.png", color: "#009900"}];
+			var tarzanBG = [{img: "https://image.ibb.co/duiJwk/tarzanBG.png", color: "#ccffcc"}];
 			updateGoogle(tarzanBG);
 			sendResponse({theme: 'tarzan'});
 		}else if(message.page_theme === 'cars' ){
-			var carsBG =[{img: "https://preview.ibb.co/d5hx6k/carsbanner.png", color: "#ff6666"}];
+			var carsBG =[{img: "https://image.ibb.co/h9sYU5/carsBG.png", color: "#ff6666"}];
 			updateGoogle(carsBG);
 			sendResponse({theme: 'cars'});
 		}else if(message.page_theme === 'tangled' ){
