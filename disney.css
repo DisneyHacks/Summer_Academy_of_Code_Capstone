@@ -15,3 +15,12 @@
 #linkPhoto, gif, video{
     display:inline;
 }
+
+#newContent{
+    padding-left: 5%; 
+    padding-bottom: 3%; 
+}
+
+#searchform{
+    opacity: 0.7; 
+}

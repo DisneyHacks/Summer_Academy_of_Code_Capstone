@@ -14,13 +14,12 @@ if (window.location.pathname === googlePathName){
 
 //IMAGES URL HERE
 var logo1 = {img: 'https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.jpg', color: '#ffffcc'};
-//var logo1 = "https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.jpg";
-//var logo2 = "https://farm5.staticflickr.com/4353/36637034225_a97300968c_z.jpg";
-//var logo3 = "https://farm5.staticflickr.com/4402/36590813826_a87542f437_z.jpg";
+var logo2 = {img: "https://preview.ibb.co/jnE3SF/princes.png", color: '#cce0ff'};
+var logo3 = {img: "https://preview.ibb.co/gVeyuv/disneygals2.png", color: '#e5ccff'};
 // var logo4 = "";
 //put all possible logo images in an array
 var logos = [];
-logos = [logo1]//, logo2, logo3]// logo4]//, 'logo5.jpg',
+logos = [logo1, logo2, logo3]// logo4]//, 'logo5.jpg',
 // 'logo6.jpg', 'logo7.png', 'logo8.png','logo9.png','logo10.png','logo11.png'];
 
 // var imageDiv = document.getElementById('lga');
@@ -63,6 +62,13 @@ $(ourDiv).attr('id', 'newContent');
 var origDiv = document.getElementById('prm-pt');
 $(origDiv).append(ourDiv);
 
+//Link stuff here
+var linkDiv = $('<a></a>');
+$(linkDiv).attr('href', 'http://www.disney.com/');
+$(linkDiv).attr('id', 'disneyWeb');
+$(linkDiv).attr('target', "_blank");
+$(ourDiv).append(linkDiv);
+
 //GIF stuff here
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function(){
@@ -75,9 +81,9 @@ xhttp.onreadystatechange = function(){
 //parse through response text
 function parseGiphy(response){
 	var obj = JSON.parse(response);
-	console.log(obj);
+	//console.log(obj);
 	var url = obj.data.embed_url
-	console.log(obj.data.embed_url);
+	//console.log(obj.data.embed_url);
 	var giphy = $('<iframe>', {
 		src: url,
         frameborder: 0,
@@ -85,31 +91,28 @@ function parseGiphy(response){
 	})
 
 
-	$(ourDiv).append(giphy);
+	$(linkDiv).append(giphy);
 }
 
-//Link stuff here
-var linkDiv = $('<a></a>');
-$(linkDiv).attr('href', 'http://www.disney.com/');
-$(linkDiv).attr('id', 'disneyWeb');
-$(linkDiv).attr('target', "_blank");
-$(ourDiv).append(linkDiv);
 //imageDiv for link
 var linkImage = $('<img></img>');
 $(linkImage).attr('id', 'linkPhoto');
 $(linkImage).attr('src',"https://image.ibb.co/iAiSMa/disney_comlogo.png", width="150",height="150");
 $(linkDiv).append(linkImage);
-console.log("index: " + index);
+//console.log("index: " + index);
 
 var vidSource = 'https://www.youtube.com/embed/videoseries?list=PLmLrLFIfPyS7Xz9ErhMAt15rPXBoBkPr2&index=' + index + '&autoplay=1';
 var vid = '<iframe src=' + vidSource + ' width="400" height="240" frameborder="0" allowfullscreen></iframe>';
-console.log(vid);
+//console.log(vid);
 
 $(linkDiv).append(vid);
 $(linkDiv).attr('id', 'video');
 
+var pOfWeirdSpace = document.getElementById('body'); 
+var deletedWeirdSpace = pOfWeirdSpace.childNodes[0].childNodes[1]; 
+deletedWeirdSpace.style.height = "60px"; 
 
-console.log("Source of vid: " + $('#video').attr('src'));
+//console.log("Source of vid: " + $('#video').attr('src'));
 
 xhttp.open("GET", "https://api.giphy.com/v1/gifs/translate?s=disney&api_key=dc4868f0b5f54decab30be68d6e80edb",true);
 xhttp.send();
