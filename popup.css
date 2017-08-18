@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 * {
-	margin: 0;
+	margin: 0 auto;
 	width: 150px;
 	height: 200px;
 	background: url("ears.jpg");
-	background-size: 200px;
+	background-size: 150px;
+	/*border: solid;*/
+
+}
+
+button {
+	text-align: center;
+	border: none;
+	padding-top: 5px;
+	margin-top: 5px;
 
 }
 
@@ -16,5 +25,12 @@
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 18px;
 	text-align: center;
+
+}
+
+#default {
+	background: red;
+	height: 50px;
+	width: 100px;
 
 }

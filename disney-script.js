@@ -17,12 +17,12 @@ var logo1 = {img: 'https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.
 var logo2 = {img: "https://preview.ibb.co/jnE3SF/princes.png", color: '#cce0ff'};
 var logo3 = {img: "https://preview.ibb.co/gVeyuv/disneygals2.png", color: '#e5ccff'};
 var logo4 = {img: "https://preview.ibb.co/eYycMa/disney_201_clipart_png_37.png", color: "#f0c1e1"};
-var logo5 = {img: "https://preview.ibb.co/bKJiuv/castle.png", color: "#ffb3b3"}; 
-var logo6 = {img: "https://preview.ibb.co/jcNySF/inside_out_fan_art_16.png", color: "#c1f0c1"}; 
-var logo7 = {img: "https://image.ibb.co/dEqP1a/theincredibles.png", color: "#ffcc99"}; 
+var logo5 = {img: "https://preview.ibb.co/bKJiuv/castle.png", color: "#ffb3b3"};
+var logo6 = {img: "https://preview.ibb.co/jcNySF/inside_out_fan_art_16.png", color: "#c1f0c1"};
+var logo7 = {img: "https://image.ibb.co/dEqP1a/theincredibles.png", color: "#ffcc99"};
 //put all possible logo images in an array
 var logos = [];
-logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7]; 
+logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7];
 
 // var imageDiv = document.getElementById('lga');
 // imageDiv.appendChild(images)
@@ -110,9 +110,9 @@ var vid = '<iframe src=' + vidSource + ' width="400" height="240" frameborder="0
 $(linkDiv).append(vid);
 $(linkDiv).attr('id', 'video');
 
-var pOfWeirdSpace = document.getElementById('body'); 
-var deletedWeirdSpace = pOfWeirdSpace.childNodes[0].childNodes[1]; 
-deletedWeirdSpace.style.height = "60px"; 
+var pOfWeirdSpace = document.getElementById('body');
+var deletedWeirdSpace = pOfWeirdSpace.childNodes[0].childNodes[1];
+deletedWeirdSpace.style.height = "60px";
 
 //console.log("Source of vid: " + $('#video').attr('src'));
 
