@@ -22,40 +22,7 @@ if (window.location.pathname === googlePathName){
 	//put all possible logo images in an array
 	var logos = [];
 	logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7, logo8];
-	updateGoogle(logos);
-}
 
-//receive message from popup to customize user theme
-chrome.runtime.onMessage.addListener(
-  function(message, sender, sendResponse) {
-    console.log(message);
-    if (message.page_theme === 'default'){
-
-			updateGoogle(logos);
-			sendResponse({theme: 'default'});
-		}else if(message.page_theme === 'tarzan' ){
-			var tarzanBG = [{img: "https://preview.ibb.co/dXnmz5/Tarzan_disneyscreencaps_com_4632.png", color: "#009900"}];
-			updateGoogle(tarzanBG);
-			sendResponse({theme: 'tarzan'});
-		}else if(message.page_theme === 'cars' ){
-			var carsBG =[{img: "https://preview.ibb.co/d5hx6k/carsbanner.png", color: "#ff6666"}];
-			updateGoogle(carsBG);
-			sendResponse({theme: 'cars'});
-		}else if(message.page_theme === 'tangled' ){
-			var tangledBG = [{img: "https://image.ibb.co/hCrGhQ/tangled_BG.png", color: "#f2e6ff"}];
-			updateGoogle(tangledBG);
-			sendResponse({theme: 'tangled'});
-		}
-
-	});
-
-
-
-function updateGoogle(logos){
-
-	var image = function(){return logos[Math.floor(Math.random()*logos.length)]};
-
-	//random videos
 	var numVids = 10;
 	var index = Math.floor(Math.random()*numVids);
 
@@ -152,13 +119,12 @@ chrome.runtime.onMessage.addListener(
 			updateGoogle(carsBG);
 			sendResponse({theme: 'cars'});
 		}else if(message.page_theme === 'tangled' ){
-			var tangledBG = [{img: "https://preview.ibb.co/ifqL95/tangled_BG.pn", color: "#f2e6ff"}];
+			var tangledBG = [{img: "https://image.ibb.co/hCrGhQ/tangled_BG.png", color: "#f2e6ff"}];
 			updateGoogle(tangledBG);
 			sendResponse({theme: 'tangled'});
 		}
 
 	});
-
 
 
 function updateGoogle(logos){
@@ -178,9 +144,6 @@ function updateGoogle(logos){
 	document.body.style.backgroundColor = image().color;
 	//images.setAttribute("style", "background-color:" + image().color);
 	p.appendChild(images);
-
-
-
 
 }
 
