@@ -20,10 +20,10 @@ var logo4 = {img: "https://preview.ibb.co/eYycMa/disney_201_clipart_png_37.png",
 var logo5 = {img: "https://preview.ibb.co/bKJiuv/castle.png", color: "#ffb3b3"}; 
 var logo6 = {img: "https://preview.ibb.co/jcNySF/inside_out_fan_art_16.png", color: "#c1f0c1"}; 
 var logo7 = {img: "https://image.ibb.co/kcZTSF/theincredibles.png", color: "#ffcc99"}; 
+var logo8 = {img: "https://image.ibb.co/mrkvbk/classic_clipart_pooh_16.png", color: "#ffd9b3"}; 
 //put all possible logo images in an array
 var logos = [];
-logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7]; 
-
+logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7, logo8]; 
 // var imageDiv = document.getElementById('lga');
 // imageDiv.appendChild(images)
 var numVids = 10;
