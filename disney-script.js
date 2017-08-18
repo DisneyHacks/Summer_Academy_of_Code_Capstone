@@ -16,11 +16,13 @@ if (window.location.pathname === googlePathName){
 var logo1 = {img: 'https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.jpg', color: '#ffffcc'};
 var logo2 = {img: "https://preview.ibb.co/jnE3SF/princes.png", color: '#cce0ff'};
 var logo3 = {img: "https://preview.ibb.co/gVeyuv/disneygals2.png", color: '#e5ccff'};
-// var logo4 = "";
+var logo4 = {img: "https://preview.ibb.co/eYycMa/disney_201_clipart_png_37.png", color: "#f0c1e1"};
+var logo5 = {img: "https://preview.ibb.co/bKJiuv/castle.png", color: "#ffb3b3"}; 
+var logo6 = {img: "https://preview.ibb.co/jcNySF/inside_out_fan_art_16.png", color: "#c1f0c1"}; 
+var logo7 = {img: "https://image.ibb.co/dEqP1a/theincredibles.png", color: "#ffcc99"}; 
 //put all possible logo images in an array
 var logos = [];
-logos = [logo1, logo2, logo3]// logo4]//, 'logo5.jpg',
-// 'logo6.jpg', 'logo7.png', 'logo8.png','logo9.png','logo10.png','logo11.png'];
+logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7]; 
 
 // var imageDiv = document.getElementById('lga');
 // imageDiv.appendChild(images)
