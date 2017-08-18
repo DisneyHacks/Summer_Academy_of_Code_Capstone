@@ -42,7 +42,7 @@ chrome.runtime.onMessage.addListener(
 			updateGoogle(carsBG);
 			sendResponse({theme: 'cars'});
 		}else if(message.page_theme === 'tangled' ){
-			var tangledBG = [{img: "https://preview.ibb.co/ifqL95/tangled_BG.pn", color: "#f2e6ff"}];
+			var tangledBG = [{img: "https://image.ibb.co/hCrGhQ/tangled_BG.png", color: "#f2e6ff"}];
 			updateGoogle(tangledBG);
 			sendResponse({theme: 'tangled'});
 		}
