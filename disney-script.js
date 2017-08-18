@@ -33,6 +33,9 @@ var logo6 = {img: "https://preview.ibb.co/jcNySF/inside_out_fan_art_16.png", col
 var logo7 = {img: "https://image.ibb.co/kcZTSF/theincredibles.png", color: "#ffcc99"};
 var logo8 = {img: "https://image.ibb.co/mrkvbk/classic_clipart_pooh_16.png", color: "#ffd9b3"};
 
+var tarzanBG = {img: "https://preview.ibb.co/dXnmz5/Tarzan_disneyscreencaps_com_4632.png", color: "#009900"}; 
+var carsBG ={img: "https://preview.ibb.co/d5hx6k/carsbanner.png", color: "#ff6666"}; 
+
 //put all possible logo images in an array
 var logos = [];
 logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7, logo8];
