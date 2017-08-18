@@ -34,9 +34,21 @@ button {
 	height: 65px;
 	width: 50px;
 }
+#default:hover {
+	background: url('defaultBlue.png'); 
+	background-size:50px 65px; 
+	height: 65px;
+	width: 50px;
+}
 
 #Tarzan{
 	background: url('tarzanbutton.png'); 
+	background-size: 45px 65px; 
+	height: 65px;
+	width: 45px;
+}
+#Tarzan:hover{
+	background: url('greenTarzan.png'); 
 	background-size: 45px 65px; 
 	height: 65px;
 	width: 45px;
