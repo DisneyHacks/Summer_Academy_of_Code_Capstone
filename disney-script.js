@@ -37,7 +37,7 @@ var logo8 = {img: "https://image.ibb.co/mrkvbk/classic_clipart_pooh_16.png", col
 
 var tarzanBG = {img: "https://preview.ibb.co/dXnmz5/Tarzan_disneyscreencaps_com_4632.png", color: "#009900"}; 
 var carsBG ={img: "https://preview.ibb.co/d5hx6k/carsbanner.png", color: "#ff6666"}; 
-
+var tangledBG = {img: "https://preview.ibb.co/ifqL95/tangled_BG.pn", color: "#f2e6ff"}; 
 //put all possible logo images in an array
 var logos = [];
 logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7, logo8];
