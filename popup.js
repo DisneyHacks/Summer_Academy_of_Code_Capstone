@@ -22,4 +22,14 @@ $('#default').click(function(){
 $('#Tarzan').click(function(){
 	localStorage.setItem('theme', 'tarzan');
 	loadPage();
-})
+});
+
+$('#Cars').click(function(){
+	localStorage.setItem('theme', 'cars');
+	loadPage();
+});
+
+$('#Tangled').click(function(){
+	localStorage.setItem('theme', 'tangled');
+	loadPage();
+});

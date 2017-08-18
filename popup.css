@@ -15,7 +15,7 @@ button {
 	border: none;
 	padding-top: 5px;
 	margin-top: 5px;
-	outline: none; 
+	outline: none;
 
 }
 
@@ -30,52 +30,52 @@ button {
 }
 
 #default {
-	background: url('defaultbutton.png'); 
-	background-size:50px 65px; 
+	background: url('defaultbutton.png');
+	background-size:50px 65px;
 	height: 65px;
 	width: 50px;
-	margin-right: 25px; 
+	margin-right: 25px;
 }
 #default:hover {
-	background: url('defaultBlue.png'); 
-	background-size:50px 65px; 
+	background: url('defaultBlue.png');
+	background-size:50px 65px;
 	height: 65px;
 	width: 50px;
 }
 
 #Tarzan{
-	background: url('tarzanbutton.png'); 
-	background-size: 45px 65px; 
+	background: url('tarzanbutton.png');
+	background-size: 45px 65px;
 	height: 65px;
 	width: 45px;
 }
 #Tarzan:hover{
-	background: url('greenTarzan.png'); 
-	background-size: 45px 65px; 
+	background: url('greenTarzan.png');
+	background-size: 45px 65px;
 	height: 65px;
 	width: 45px;
 }
 #Cars{
-	background: url('carsBtn.png'); 
-	background-size: 70px 37px; 
+	background: url('carsBtn.png');
+	background-size: 70px 37px;
 	height: 37px;
 	width: 70px;
 }
 #Cars:hover{
-	background: url('carsRed.png'); 
-	background-size: 70px 37px; 
+	background: url('carsRed.png');
+	background-size: 70px 37px;
 	height: 37px;
 	width: 70px;
 }
 #Tangled{
-	background: url('tangledBtn.png'); 
+	background: url('tangledBtn.png');
 	background-size: 70px 70px; 
-	height: 70px; 
-	width: 70px; 
+	height: 70px;
+	width: 70px;
 }
 #Tangled:hover{
-	background: url('tangledPurp.png'); 
-	background-size: 70px 70px; 
-	height: 70px; 
-	width: 70px; 
+	background: url('tangledPurp.png');
+	background-size: 70px 70px;
+	height: 70px;
+	width: 70px;
 }
