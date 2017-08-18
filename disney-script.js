@@ -3,6 +3,17 @@ console.log("disney content script: begin...");
 var newTabPathName = "/_/chrome/newtab";
 var googlePathName = "/";
 
+//receive message from popup
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    console.log(sender.tab ?
+                "from a content script:" + sender.tab.url :
+                "from the extension");
+    if (request.greeting == "hello")
+      sendResponse({farewell: "goodbye"});
+  });
+
+
 
 if (window.location.pathname === newTabPathName){
 	location.href = "https://www.google.com";
@@ -17,23 +28,16 @@ var logo1 = {img: 'https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.
 var logo2 = {img: "https://preview.ibb.co/jnE3SF/princes.png", color: '#cce0ff'};
 var logo3 = {img: "https://preview.ibb.co/gVeyuv/disneygals2.png", color: '#e5ccff'};
 var logo4 = {img: "https://preview.ibb.co/eYycMa/disney_201_clipart_png_37.png", color: "#f0c1e1"};
-<<<<<<< HEAD
+
 var logo5 = {img: "https://preview.ibb.co/bKJiuv/castle.png", color: "#ffb3b3"};
 var logo6 = {img: "https://preview.ibb.co/jcNySF/inside_out_fan_art_16.png", color: "#c1f0c1"};
 var logo7 = {img: "https://image.ibb.co/dEqP1a/theincredibles.png", color: "#ffcc99"};
-//put all possible logo images in an array
-var logos = [];
-logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7];
-
-=======
-var logo5 = {img: "https://preview.ibb.co/bKJiuv/castle.png", color: "#ffb3b3"};
-var logo6 = {img: "https://preview.ibb.co/jcNySF/inside_out_fan_art_16.png", color: "#c1f0c1"};
-var logo7 = {img: "https://image.ibb.co/kcZTSF/theincredibles.png", color: "#ffcc99"};
 var logo8 = {img: "https://image.ibb.co/mrkvbk/classic_clipart_pooh_16.png", color: "#ffd9b3"};
+
 //put all possible logo images in an array
 var logos = [];
 logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7, logo8];
->>>>>>> b4197e1820ee7ce674388658d522cdff694894f9
+// >>>>>>> b4197e1820ee7ce674388658d522cdff694894f9
 // var imageDiv = document.getElementById('lga');
 // imageDiv.appendChild(images)
 var numVids = 10;
