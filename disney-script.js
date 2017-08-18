@@ -22,55 +22,10 @@ if (window.location.pathname === googlePathName){
 	//put all possible logo images in an array
 	var logos = [];
 	logos = [logo1, logo2, logo3,  logo4, logo5, logo6, logo7, logo8];
-	updateGoogle(logos);
-}
 
-//receive message from popup to customize user theme
-chrome.runtime.onMessage.addListener(
-  function(message, sender, sendResponse) {
-    console.log(message);
-    if (message.page_theme === 'default'){
-
-			updateGoogle(logos);
-			sendResponse({theme: 'default'});
-		}else if(message.page_theme === 'tarzan' ){
-			var tarzanBG = [{img: "https://preview.ibb.co/dXnmz5/Tarzan_disneyscreencaps_com_4632.png", color: "#009900"}];
-			updateGoogle(tarzanBG);
-			sendResponse({theme: 'tarzan'});
-		}else if(message.page_theme === 'cars' ){
-			var carsBG =[{img: "https://preview.ibb.co/d5hx6k/carsbanner.png", color: "#ff6666"}];
-			updateGoogle(carsBG);
-			sendResponse({theme: 'cars'});
-		}else if(message.page_theme === 'tangled' ){
-			var tangledBG = [{img: "https://preview.ibb.co/ifqL95/tangled_BG.pn", color: "#f2e6ff"}];
-			updateGoogle(tangledBG);
-			sendResponse({theme: 'tangled'});
-		}
-
-	});
-
-
-
-function updateGoogle(logos){
-
-	var image = function(){return logos[Math.floor(Math.random()*logos.length)]};
-
+	//random videos
 	var numVids = 10;
-
 	var index = Math.floor(Math.random()*numVids);
-
-	//update logo
-	var changeLogo = document.getElementById('hplogo');
-	var p = changeLogo.parentNode;
-	p.removeChild(changeLogo);
-
-
-	var images = document.createElement('IMG');
-	images.id = 'hplogo';
-	images.setAttribute("src", image().img);
-	document.body.style.backgroundColor = image().color;
-	//images.setAttribute("style", "background-color:" + image().color);
-	p.appendChild(images);
 
 	//remove top sites
 	var removeSites = document.getElementById('mv-tiles');
@@ -143,6 +98,57 @@ function updateGoogle(logos){
 
 	xhttp.open("GET", "https://api.giphy.com/v1/gifs/translate?s=disney&api_key=dc4868f0b5f54decab30be68d6e80edb",true);
 	xhttp.send();
+
+
+	updateGoogle(logos);
+}
+
+//receive message from popup to customize user theme
+chrome.runtime.onMessage.addListener(
+  function(message, sender, sendResponse) {
+    console.log(message);
+    if (message.page_theme === 'default'){
+
+			updateGoogle(logos);
+			sendResponse({theme: 'default'});
+		}else if(message.page_theme === 'tarzan' ){
+			var tarzanBG = [{img: "https://preview.ibb.co/dXnmz5/Tarzan_disneyscreencaps_com_4632.png", color: "#009900"}];
+			updateGoogle(tarzanBG);
+			sendResponse({theme: 'tarzan'});
+		}else if(message.page_theme === 'cars' ){
+			var carsBG =[{img: "https://preview.ibb.co/d5hx6k/carsbanner.png", color: "#ff6666"}];
+			updateGoogle(carsBG);
+			sendResponse({theme: 'cars'});
+		}else if(message.page_theme === 'tangled' ){
+			var tangledBG = [{img: "https://preview.ibb.co/ifqL95/tangled_BG.pn", color: "#f2e6ff"}];
+			updateGoogle(tangledBG);
+			sendResponse({theme: 'tangled'});
+		}
+
+	});
+
+
+
+function updateGoogle(logos){
+
+	var image = function(){return logos[Math.floor(Math.random()*logos.length)]};
+
+
+	//update logo
+	var changeLogo = document.getElementById('hplogo');
+	var p = changeLogo.parentNode;
+	p.removeChild(changeLogo);
+
+	//update google image
+	var images = document.createElement('IMG');
+	images.id = 'hplogo';
+	images.setAttribute("src", image().img);
+	document.body.style.backgroundColor = image().color;
+	//images.setAttribute("style", "background-color:" + image().color);
+	p.appendChild(images);
+
+
+
 
 }
 
