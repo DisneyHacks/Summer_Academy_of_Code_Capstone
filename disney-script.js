@@ -3,7 +3,14 @@ console.log("disney content script: begin...");
 var newTabPathName = "/_/chrome/newtab";
 var googlePathName = "/";
 
-if (window.location.pathname === newTabPathName || window.location.pathname === googlePathName){
+
+if (window.location.pathname === newTabPathName){
+	location.href = "https://www.google.com";
+}
+
+
+if (window.location.pathname === googlePathName){
+
 
 //IMAGES URL HERE
 var logo1 = {img: 'https://farm5.staticflickr.com/4398/36468138522_eba45f500b_z.jpg', color: '#ffffcc'};
@@ -106,7 +113,6 @@ console.log("Source of vid: " + $('#video').attr('src'));
 
 xhttp.open("GET", "https://api.giphy.com/v1/gifs/translate?s=disney&api_key=dc4868f0b5f54decab30be68d6e80edb",true);
 xhttp.send();
-
 
 
 

@@ -20,6 +20,10 @@
     }
   ],
 
+  "chrome_settings_overrides": {
+    "startup_pages": ["https://www.google.com"]
+  },
+
   "permissions": [
     "activeTab",
     "pageCapture",
