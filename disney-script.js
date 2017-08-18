@@ -3,21 +3,23 @@ console.log("disney content script: begin...");
 var newTabPathName = "/_/chrome/newtab";
 var googlePathName = "/";
 
-//receive message from popup
-chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
-    console.log(sender.tab ?
-                "from a content script:" + sender.tab.url :
-                "from the extension");
-    if (request.greeting == "hello")
-      sendResponse({farewell: "goodbye"});
-  });
-
-
-
+//redirect newTab to google.com
 if (window.location.pathname === newTabPathName){
 	location.href = "https://www.google.com";
 }
+
+//receive message from popup to customize user theme
+chrome.runtime.onMessage.addListener(
+  function(message, sender, sendResponse) {
+    console.log(message);
+    if (message.page_theme === 'default'){
+			sendResponse({theme: 'default'});
+		}else if(message.page_theme === 'tarzan' ){
+			sendResponse({theme: 'tarzan'});
+		}
+
+  });
+
 
 
 if (window.location.pathname === googlePathName){
